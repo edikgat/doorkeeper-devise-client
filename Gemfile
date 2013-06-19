@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
-
+gem 'mysql2'
+gem 'therubyracer', require: "v8"
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -9,6 +10,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'haml-rails'
+gem 'faraday'
 
 
 # Gems used only for assets and not required
@@ -38,11 +40,11 @@ group :test do
   gem 'turn', '~> 0.8.3', :require => false
 end
 
-group :development do
-  gem 'sqlite3'
-end
+# group :development do
+#   gem 'sqlite3'
+# end
 
-group :production do
-  gem 'pg'
-  gem 'thin'
-end
+# group :production do
+#   gem 'pg'
+#   gem 'thin'
+# end

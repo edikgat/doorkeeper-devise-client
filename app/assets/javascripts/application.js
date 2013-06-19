@@ -18,3 +18,14 @@ $(function() {
     return false;
   });
 });
+
+
+
+var HomePageManagement = window.HomePageManagement = {
+  autoLogin: function() {
+    $(document).ready(function() {
+      var login_url = $('#js-home-sign_in').attr('href');
+      window.location.replace(login_url);
+    }); 
+  }
+}
