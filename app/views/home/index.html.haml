@@ -1,13 +1,14 @@
-/ - unless signed_in?
-/   = content_for :javascript_code do
-/     HomePageManagement.autoLogin();
+- unless signed_in?
+  = content_for :javascript_code do
+    HomePageManagement.autoLogin();
 
 %section
   .row
     .span16
+      %h1 Buddybet
       - unless signed_in?
-        %h3 Sign in to provider
-        %p= link_to "Sign in with OAuth", user_omniauth_authorize_path(:doorkeeper), :class => "btn primary", id: "js-home-sign_in"
+        / %h3 Sign in to provider
+        %p= link_to "Sign in with OAuth", user_omniauth_authorize_path(:doorkeeper), :class => "btn primary hidden", id: "js-home-sign_in"
       - else
         %h2 Explore the api
         .well

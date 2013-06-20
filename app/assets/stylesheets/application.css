@@ -13,3 +13,7 @@ body {
 section > .row {
   margin-bottom: 10px;
 }
+
+.hidden {
+  display: none !important;
+}
