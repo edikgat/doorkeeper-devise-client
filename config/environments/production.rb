@@ -15,7 +15,7 @@ DoorkeeperDeviseClient::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -46,7 +46,7 @@ DoorkeeperDeviseClient::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
   # Enable threaded mode
   # config.threadsafe!
@@ -57,9 +57,9 @@ DoorkeeperDeviseClient::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-  config.action_mailer.default_url_options = { :host => 'doorkeeper-devise.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'ec2-176-34-85-12.eu-west-1.compute.amazonaws.com' }
 end
 
-DOORKEEPER_APP_ID = "1ddde7cfab1b1696104f2fde213ada8b504972de7b2d17eaaa3125cb559f65c9"
-DOORKEEPER_APP_SECRET = "796ce849f90771b5d3f4f2b9f3c2b48b2db3e4052d94d40b5f1d9f86cee63a73"
-DOORKEEPER_APP_URL = "http://doorkeeper-provider.herokuapp.com"
+DOORKEEPER_APP_ID = "4dc72e4b9c144835ee0fa34e900c5805773deb21f19c6d353d891f25e999f3e2"
+DOORKEEPER_APP_SECRET = "542ebf3f8a043929a6ac54a397aba08cdb14d54fb902c86042521847c8b6b0f0"
+DOORKEEPER_APP_URL = "http://ec2-176-34-85-12.eu-west-1.compute.amazonaws.com"
